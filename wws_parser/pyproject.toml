@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "wws-parser"
+version = "0.1.0"
+description = ""
+authors = ["Scone"]
+readme = "README.md"
+packages = [{include = "wws_parser"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pymongo = "^4.5.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+pylint = "^2.17.5"
+pytest = "^7.4.2"
+
+[tool.poetry.scripts]
+wws-parser = 'wws_parser.__main__:main'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
